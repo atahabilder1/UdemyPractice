@@ -31,9 +31,16 @@ public class BubbleSort{
 				if (array1.length>1) {
 					
 					if (array1[j+1]<array1[j]) {
-						 int temp =array1[j+1];
-						 array1[j+1]=array1[j];
-						 array1[j]=temp;
+						
+						// This is swaping the values
+//						int temp =array1[j+1];
+//						 array1[j+1]=array1[j];
+//						 array1[j]=temp;
+						swap(array1, j+1, j); // isntead of using this swap function we can compute it directly
+						
+						
+						
+						
 					}
 				}
 			}
@@ -43,7 +50,14 @@ public class BubbleSort{
 	}
 	
  
-	
+// This is swap method defination
+	public static int[] swap(int c[] ,int a, int b) {
+		 int temp;
+		 temp=c[a];
+		 c[a]=c[b];
+		 c[b]=temp;
+		return c;  
+	}
 	 
 	
 // This is the method to print
